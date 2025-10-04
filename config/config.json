@@ -1,0 +1,12 @@
+{
+  "organizations": [
+    "gemini-cli-extensions"
+  ],
+  "topics": [
+    "gemini-cli-extensions"
+  ],
+  "repositories": [],
+  "output": {
+    "filename": "gemini-extensions.json"
+  }
+}

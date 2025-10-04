@@ -1,0 +1,21 @@
+{
+  "name": "extensionsscanner",
+  "version": "1.0.0",
+  "description": "GitHub repository scanner that aggregates data from organizations, topics, and specific repos",
+  "main": "src/index.js",
+  "bin": {
+    "scan-repos": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "scan": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["github", "scanner", "repository", "api"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^22.0.0",
+    "dotenv": "^17.2.3"
+  }
+}
