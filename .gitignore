@@ -5,9 +5,6 @@ package-lock.json
 # Environment variables
 .env
 
-# Output files
-output/*.json
-
 # Logs
 *.log
 npm-debug.log*
