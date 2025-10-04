@@ -6,6 +6,9 @@
     "gemini-cli-extensions"
   ],
   "repositories": [],
+  "fileSearches": [
+    "gemini-extension.json"
+  ],
   "output": {
     "filename": "gemini-extensions.json"
   }

@@ -1,5 +1,10 @@
 function formatRepoData(repos) {
-  return repos.map(repo => ({
+  // Sort by stars descending
+  const sortedRepos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+  // Add rank and format
+  return sortedRepos.map((repo, index) => ({
+    rank: index + 1,
     url: repo.html_url,
     description: repo.description || '',
     stars: repo.stargazers_count,

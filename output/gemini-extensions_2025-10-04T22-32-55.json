@@ -1,671 +1,547 @@
 [
   {
-    "rank": 1,
-    "url": "https://github.com/gemini-cli-extensions/nanobanana",
-    "description": "",
-    "stars": 212,
-    "lastUpdated": "2025-10-04T20:38:35Z"
-  },
-  {
-    "rank": 2,
     "url": "https://github.com/gemini-cli-extensions/security",
     "description": "Google's Security extension for the Gemini CLI that finds vulnerabilities in your code changes and pull requests.",
     "stars": 104,
     "lastUpdated": "2025-10-04T20:39:57Z"
   },
   {
-    "rank": 3,
     "url": "https://github.com/gemini-cli-extensions/code-review",
     "description": "Google's Code Review extension for the Gemini CLI that reviews your code changes",
     "stars": 25,
     "lastUpdated": "2025-10-04T20:40:13Z"
   },
   {
-    "rank": 4,
-    "url": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql",
-    "description": "",
-    "stars": 12,
-    "lastUpdated": "2025-09-30T22:29:10Z"
-  },
-  {
-    "rank": 5,
-    "url": "https://github.com/gemini-cli-extensions/mcp-toolbox",
-    "description": "",
-    "stars": 9,
-    "lastUpdated": "2025-10-03T04:38:01Z"
-  },
-  {
-    "rank": 6,
-    "url": "https://github.com/gemini-cli-extensions/looker",
-    "description": "",
-    "stars": 8,
-    "lastUpdated": "2025-10-02T15:20:17Z"
-  },
-  {
-    "rank": 7,
-    "url": "https://github.com/gemini-cli-extensions/postgres",
-    "description": "",
-    "stars": 8,
-    "lastUpdated": "2025-10-04T02:00:55Z"
-  },
-  {
-    "rank": 8,
-    "url": "https://github.com/gemini-cli-extensions/sql-server",
-    "description": "",
-    "stars": 7,
-    "lastUpdated": "2025-10-02T23:45:32Z"
-  },
-  {
-    "rank": 9,
     "url": "https://github.com/gemini-cli-extensions/alloydb",
     "description": "",
     "stars": 5,
     "lastUpdated": "2025-09-30T22:27:30Z"
   },
   {
-    "rank": 10,
-    "url": "https://github.com/gemini-cli-extensions/spanner",
-    "description": "",
-    "stars": 5,
-    "lastUpdated": "2025-09-30T22:41:09Z"
-  },
-  {
-    "rank": 11,
     "url": "https://github.com/gemini-cli-extensions/bigquery-data-analytics",
     "description": "",
     "stars": 4,
     "lastUpdated": "2025-10-03T22:15:00Z"
   },
   {
-    "rank": 12,
-    "url": "https://github.com/gemini-cli-extensions/firestore-native",
+    "url": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql",
     "description": "",
-    "stars": 4,
-    "lastUpdated": "2025-09-30T22:38:03Z"
+    "stars": 12,
+    "lastUpdated": "2025-09-30T22:29:10Z"
   },
   {
-    "rank": 13,
     "url": "https://github.com/gemini-cli-extensions/cloud-sql-mysql",
     "description": "",
     "stars": 3,
     "lastUpdated": "2025-10-03T20:42:36Z"
   },
   {
-    "rank": 14,
-    "url": "https://github.com/gemini-cli-extensions/alloydb-observability",
-    "description": "",
-    "stars": 3,
-    "lastUpdated": "2025-09-30T22:28:03Z"
-  },
-  {
-    "rank": 15,
-    "url": "https://github.com/gemini-cli-extensions/flutter",
-    "description": "",
-    "stars": 3,
-    "lastUpdated": "2025-10-04T14:30:40Z"
-  },
-  {
-    "rank": 16,
-    "url": "https://github.com/gemini-cli-extensions/mysql",
-    "description": "",
-    "stars": 2,
-    "lastUpdated": "2025-10-01T02:42:00Z"
-  },
-  {
-    "rank": 17,
-    "url": "https://github.com/gemini-cli-extensions/bigquery-conversational-analytics",
-    "description": "",
-    "stars": 2,
-    "lastUpdated": "2025-09-30T22:30:11Z"
-  },
-  {
-    "rank": 18,
-    "url": "https://github.com/derailed-dash/adk-docs-ext",
-    "description": "ADK Docs Extension for Gemini CLI",
-    "stars": 2,
-    "lastUpdated": "2025-09-27T15:50:44Z"
-  },
-  {
-    "rank": 19,
     "url": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-10-03T20:57:32Z"
   },
   {
-    "rank": 20,
     "url": "https://github.com/gemini-cli-extensions/dataplex",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-09-30T22:37:07Z"
   },
   {
-    "rank": 21,
+    "url": "https://github.com/gemini-cli-extensions/firestore-native",
+    "description": "",
+    "stars": 4,
+    "lastUpdated": "2025-09-30T22:38:03Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/looker",
+    "description": "",
+    "stars": 8,
+    "lastUpdated": "2025-10-02T15:20:17Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/spanner",
+    "description": "",
+    "stars": 5,
+    "lastUpdated": "2025-09-30T22:41:09Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/mcp-toolbox",
+    "description": "",
+    "stars": 9,
+    "lastUpdated": "2025-10-03T04:38:01Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/postgres",
+    "description": "",
+    "stars": 8,
+    "lastUpdated": "2025-10-04T02:00:55Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/mysql",
+    "description": "",
+    "stars": 2,
+    "lastUpdated": "2025-10-01T02:42:00Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/sql-server",
+    "description": "",
+    "stars": 7,
+    "lastUpdated": "2025-10-02T23:45:32Z"
+  },
+  {
     "url": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql-observability",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-09-30T22:33:04Z"
   },
   {
-    "rank": 22,
     "url": "https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-09-30T22:32:58Z"
   },
   {
-    "rank": 23,
     "url": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-09-30T22:36:50Z"
   },
   {
-    "rank": 24,
+    "url": "https://github.com/gemini-cli-extensions/alloydb-observability",
+    "description": "",
+    "stars": 3,
+    "lastUpdated": "2025-09-30T22:28:03Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/flutter",
+    "description": "",
+    "stars": 3,
+    "lastUpdated": "2025-10-04T14:30:40Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/bigquery-conversational-analytics",
+    "description": "",
+    "stars": 2,
+    "lastUpdated": "2025-09-30T22:30:11Z"
+  },
+  {
+    "url": "https://github.com/gemini-cli-extensions/nanobanana",
+    "description": "",
+    "stars": 212,
+    "lastUpdated": "2025-10-04T20:38:35Z"
+  },
+  {
     "url": "https://github.com/gemini-cli-extensions/firebase",
     "description": "",
     "stars": 1,
     "lastUpdated": "2025-10-03T21:19:28Z"
   },
   {
-    "rank": 25,
+    "url": "https://github.com/derailed-dash/adk-docs-ext",
+    "description": "ADK Docs Extension for Gemini CLI",
+    "stars": 2,
+    "lastUpdated": "2025-09-27T15:50:44Z"
+  },
+  {
     "url": "https://github.com/ox01024/gemini-cli-git",
     "description": "This is a Gemini CLI extension that provides convenient Git commands to streamline your development workflow.",
     "stars": 0,
     "lastUpdated": "2025-09-20T05:03:32Z"
   },
   {
-    "rank": 26,
     "url": "https://github.com/google-gemini/gemini-cli",
     "description": "An open-source AI agent that brings the power of Gemini directly into your terminal."
   },
   {
-    "rank": 27,
     "url": "https://github.com/chromium/chromium",
     "description": "The official GitHub mirror of the Chromium source"
   },
   {
-    "rank": 28,
     "url": "https://github.com/GoogleCloudPlatform/gke-mcp",
     "description": ""
   },
   {
-    "rank": 29,
     "url": "https://github.com/palladius/genai-googlecloud-scripts",
     "description": "My GenAI scripts and templates"
   },
   {
-    "rank": 30,
     "url": "https://github.com/hashicorp/terraform-mcp-server",
     "description": "The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development."
   },
   {
-    "rank": 31,
     "url": "https://github.com/redis/mcp-redis",
     "description": "The official Redis MCP Server is a natural language interface designed for agentic applications to manage and search data in Redis efficiently"
   },
   {
-    "rank": 32,
     "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
     "description": "Chrome DevTools for coding agents"
   },
   {
-    "rank": 33,
     "url": "https://github.com/jp2507-max/canabro",
     "description": ""
   },
   {
-    "rank": 34,
     "url": "https://github.com/firebase/firebase-tools",
     "description": "The Firebase Command Line Tools"
   },
   {
-    "rank": 35,
     "url": "https://github.com/wix/wix-mcp",
     "description": "Wix MCP Server public repo"
   },
   {
-    "rank": 36,
     "url": "https://github.com/automateyournetwork/pyATS_GeminiCLI_Extension",
     "description": "An easy to install pyATS extension for Gemini CLI "
   },
   {
-    "rank": 37,
     "url": "https://github.com/Daybreak312/sub-agent-system",
     "description": ""
   },
   {
-    "rank": 38,
     "url": "https://github.com/qodo-ai/open-aware",
     "description": "Aware - Deep Code Research Agent for Complex Codebase & Knowledge that “Act As Your Agentic Principal Engineer” "
   },
   {
-    "rank": 39,
     "url": "https://github.com/Eddyruphay/oci",
     "description": ""
   },
   {
-    "rank": 40,
     "url": "https://github.com/weitzer-org/comment-driven-tests-extension",
     "description": ""
   },
   {
-    "rank": 41,
     "url": "https://github.com/nwjs/chromium.src",
     "description": "Chromium codebase with NW.js modifications. Based on https://chromium.googlesource.com/chromium/src.git"
   },
   {
-    "rank": 42,
     "url": "https://github.com/ozluk188-bit/Ansel-3-main",
     "description": ""
   },
   {
-    "rank": 43,
     "url": "https://github.com/LikelyLucid/nixos",
     "description": ""
   },
   {
-    "rank": 44,
     "url": "https://github.com/hughescr/apartment-manager",
     "description": "Craig's Apartment Manager"
   },
   {
-    "rank": 45,
     "url": "https://github.com/benixmaxedis/migration_proto",
     "description": "Go-based phone system migration tool with Claude AI integration using Bubble Tea TUI"
   },
   {
-    "rank": 46,
     "url": "https://github.com/markmcd/gemini-docs-ext",
     "description": "Gemini CLI extension that adds Gemini API docs and MCP"
   },
   {
-    "rank": 47,
     "url": "https://github.com/GoogleCloudPlatform/gemini-cloud-assist-mcp",
     "description": "An MCP Server for Gemini Cloud Assist; provides tools to assist with your tasks on GCP"
   },
   {
-    "rank": 48,
     "url": "https://github.com/pinecone-io/pinecone-mcp",
     "description": "Connect your Pinecone projects to Cursor, Claude, and other AI assistants"
   },
   {
-    "rank": 49,
     "url": "https://github.com/pauldatta/gemini-cli-commands-demo",
     "description": ""
   },
   {
-    "rank": 50,
     "url": "https://github.com/colrvia-a11y/Colrvia10",
     "description": ""
   },
   {
-    "rank": 51,
     "url": "https://github.com/Yamino00/Eatlyst",
     "description": ""
   },
   {
-    "rank": 52,
     "url": "https://github.com/SonarSource/sonarqube-mcp-server",
     "description": "SonarQube MCP Server"
   },
   {
-    "rank": 53,
     "url": "https://github.com/hashicorp/vault-mcp-server",
     "description": ""
   },
   {
-    "rank": 54,
     "url": "https://github.com/wcygan/wcygan.net",
     "description": "Personal portfolio and blog"
   },
   {
-    "rank": 55,
     "url": "https://github.com/pauldatta/gemini-cli-extensions-demo",
     "description": ""
   },
   {
-    "rank": 56,
     "url": "https://github.com/QuanZhang-William/gemini-cli-security",
     "description": "Google's Security extension for the Gemini CLI that finds vulnerabilities in your code changes and pull requests."
   },
   {
-    "rank": 57,
     "url": "https://github.com/youtube/cobalt",
     "description": "Cobalt is a lightweight HTML5 application container"
   },
   {
-    "rank": 58,
     "url": "https://github.com/mongodb-partners/mdb-gemini-cli-ext",
     "description": "This repo will host the gemini CLI extension for MongoDB "
   },
   {
-    "rank": 59,
     "url": "https://github.com/flutter/gemini-cli-extension",
     "description": "An extension for Gemini CLI that assists with creating and maintaining Flutter code."
   },
   {
-    "rank": 60,
     "url": "https://github.com/akougkas/gemini-4-science",
     "description": "Scientific Computing extensions for Gemini CLI using the IOWarp HPC Toolkit"
   },
   {
-    "rank": 61,
     "url": "https://github.com/statlyaus/Statly",
     "description": ""
   },
   {
-    "rank": 62,
     "url": "https://github.com/Kjdragan/alien-dev",
     "description": ""
   },
   {
-    "rank": 63,
     "url": "https://github.com/MasihMoafi/A-Modular-Kingdom",
     "description": ""
   },
   {
-    "rank": 64,
     "url": "https://github.com/stripe/agent-toolkit",
     "description": "Python and TypeScript library for integrating the Stripe API into agentic workflows"
   },
   {
-    "rank": 65,
     "url": "https://github.com/Dmccarty30/Journeyman-Jobs",
     "description": "version 3 of JJ"
   },
   {
-    "rank": 66,
     "url": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio",
     "description": "GenMedia Creative Studio is a Vertex AI generative media user experience highlighting the use of Imagen, Veo, Gemini 🍌, Gemini TTS, Chirp 3, Lyria and other generative media APIs on Google Cloud."
   },
   {
-    "rank": 67,
     "url": "https://github.com/harness/mcp-server",
     "description": "This is the official repo for the Harness MCP server"
   },
   {
-    "rank": 68,
     "url": "https://github.com/elastic/gemini-cli-elasticsearch",
     "description": "Official Elasticsearch extension for Gemini CLI"
   },
   {
-    "rank": 69,
     "url": "https://github.com/xprilion/gemini-cli-blender-extension",
     "description": "A super simple extension to enable Blender via MCP for Gemini CLI"
   },
   {
-    "rank": 70,
     "url": "https://github.com/colrvia-a11y/colrvia5",
     "description": ""
   },
   {
-    "rank": 71,
     "url": "https://github.com/adrianstanca1/final",
     "description": "as agents construction manager software"
   },
   {
-    "rank": 72,
     "url": "https://github.com/setaman/real-estate-intelligence-unit",
     "description": ""
   },
   {
-    "rank": 73,
     "url": "https://github.com/darrinmc1/intelacademyV3",
     "description": "intelacademyV3"
   },
   {
-    "rank": 74,
     "url": "https://github.com/neo4j-contrib/mcp-neo4j",
     "description": "Model Context Protocol with Neo4j"
   },
   {
-    "rank": 75,
     "url": "https://github.com/BYUMarsRover/marsrover_2.0",
     "description": "Dockerized ROS2 development environment with Gazebo."
   },
   {
-    "rank": 76,
     "url": "https://github.com/postmanlabs/postman-mcp-server",
     "description": "Connect your AI to your APIs on Postman"
   },
   {
-    "rank": 77,
     "url": "https://github.com/thoughtspot/mcp-server",
     "description": "The ThoughtSpot MCP Server"
   },
   {
-    "rank": 78,
     "url": "https://github.com/ghchinoy/cloud-status",
     "description": "Google Cloud Service Health cli and MCP server"
   },
   {
-    "rank": 79,
     "url": "https://github.com/palladius/vibecoding",
     "description": "Apps created with vibecoding, one folder each."
   },
   {
-    "rank": 80,
     "url": "https://github.com/dynatrace-oss/dynatrace-mcp",
     "description": "MCP server for Dynatrace Observability"
   },
   {
-    "rank": 81,
     "url": "https://github.com/xprilion/gemini-cli-test-extension",
     "description": ""
   },
   {
-    "rank": 82,
     "url": "https://github.com/jhspaybar/gemini-cli-manager",
     "description": "CLI tool for managing Gemini extensions, profiles, and tools"
   },
   {
-    "rank": 83,
     "url": "https://github.com/snyk/agentic-integration-wrappers",
     "description": "Provides wrappers to integrate with agentic workflows"
   },
   {
-    "rank": 84,
     "url": "https://github.com/whereispolaris/canva-gemini-extension",
     "description": "Gemini CLI Extension for Canva MCP"
   },
   {
-    "rank": 85,
     "url": "https://github.com/Luiz727/nixcon-web",
     "description": ""
   },
   {
-    "rank": 86,
     "url": "https://github.com/ameer00/_gem",
     "description": "Gemini custom files"
   },
   {
-    "rank": 87,
     "url": "https://github.com/confluentinc/mcp-confluent",
     "description": ""
   },
   {
-    "rank": 88,
     "url": "https://github.com/SonyaMoisset/spec-driven-persona-project",
     "description": ""
   },
   {
-    "rank": 89,
     "url": "https://github.com/grafana/mcp-grafana",
     "description": "MCP server for Grafana"
   },
   {
-    "rank": 90,
     "url": "https://github.com/Dutch-voyage/neuro-cli",
     "description": ""
   },
   {
-    "rank": 91,
     "url": "https://github.com/nuno80/fantavega",
     "description": ""
   },
   {
-    "rank": 92,
     "url": "https://github.com/ameer00/games",
     "description": ""
   },
   {
-    "rank": 93,
     "url": "https://github.com/wanbiao1993usa/gemini-cli",
     "description": ""
   },
   {
-    "rank": 94,
     "url": "https://github.com/palladius/gemini-cli-custom-commands",
     "description": "Ricc's golden custom commands"
   },
   {
-    "rank": 95,
     "url": "https://github.com/nothatDinger/gemini-cli-0.2.2",
     "description": "gemini-cli with trace monitor"
   },
   {
-    "rank": 96,
     "url": "https://github.com/joshbickett/openagent",
     "description": ""
   },
   {
-    "rank": 97,
     "url": "https://github.com/BillPolly/Legion",
     "description": "Legion - A modular framework for building AI agent tools"
   },
   {
-    "rank": 98,
     "url": "https://github.com/palladius/booth-ideas-sg",
     "description": "App Ideas  Gemini CLI + GH Actions demo (forked from Paul Datta awesome demo)"
   },
   {
-    "rank": 99,
     "url": "https://github.com/pauldatta/booth-ideas-sg",
     "description": ""
   },
   {
-    "rank": 100,
     "url": "https://github.com/colrvia-a11y/Colrvia6",
     "description": ""
   },
   {
-    "rank": 101,
     "url": "https://github.com/youtube/cobalt_sandbox",
     "description": "Cobalt dev workflow sandbox - this repo exists only as a CI sandbox. Please see http://cobalt.dev and https://github.com/youtube/cobalt"
   },
   {
-    "rank": 102,
     "url": "https://github.com/Kjdragan/KevGenMediaMCP",
     "description": ""
   },
   {
-    "rank": 103,
     "url": "https://github.com/adrianstanca1/asagents-final",
     "description": "a"
   },
   {
-    "rank": 104,
     "url": "https://github.com/Suryansh-23/autonome",
     "description": ""
   },
   {
-    "rank": 105,
     "url": "https://github.com/darrinmc1/IntelAcademyV2",
     "description": "Intelligence Academy V2"
   },
   {
-    "rank": 106,
     "url": "https://github.com/darrinmc1/intelappv4",
     "description": "intelappv4"
   },
   {
-    "rank": 107,
     "url": "https://github.com/canva-sdks/canva-gemini-extension",
     "description": ""
   },
   {
-    "rank": 108,
     "url": "https://github.com/innovativeenterprises/innovative-enterprises",
     "description": ""
   },
   {
-    "rank": 109,
     "url": "https://github.com/javiercanadillas/games",
     "description": ""
   },
   {
-    "rank": 110,
     "url": "https://github.com/chrstnb/extension",
     "description": "example extension"
   },
   {
-    "rank": 111,
     "url": "https://github.com/yeshwanth1993/cicd-agent",
     "description": ""
   },
   {
-    "rank": 112,
     "url": "https://github.com/whereispolaris/canva-dev-mcp",
     "description": ""
   },
   {
-    "rank": 113,
     "url": "https://github.com/ajaysundark/konverse",
     "description": "Conversational K8s Node Observability"
   },
   {
-    "rank": 114,
     "url": "https://github.com/gplasky/gemini-cli-blueprint-extension",
     "description": "A gemini CLI extension that guides software development from initial concept to implementation using a series of commands."
   },
   {
-    "rank": 115,
     "url": "https://github.com/azizsaif899/g-assistant",
     "description": ""
   },
   {
-    "rank": 116,
     "url": "https://github.com/rodydavis/google-fonts-gemini-cli-extension",
     "description": "Gemini CLI extension for Google Fonts + Material Icons and Symbols"
   },
   {
-    "rank": 117,
     "url": "https://github.com/azizsaif899/nexus",
     "description": ""
   },
   {
-    "rank": 118,
     "url": "https://github.com/GoogleCloudPlatform/cloud-run-mcp",
     "description": "MCP server to deploy apps to Cloud Run"
   },
   {
-    "rank": 119,
     "url": "https://github.com/elasticdotventures/dotfiles",
     "description": "🥾 _b00t_:  brians dotfiles."
   },
   {
-    "rank": 120,
     "url": "https://github.com/enola-dev/github-issue-agent",
     "description": "GitHub Issues 🐛 AI Agent"
   },
   {
-    "rank": 121,
     "url": "https://github.com/ksprashu/llm-docs-mcp",
     "description": "A self generating extension to add mcpdocs to Gemini CLI"
   },
   {
-    "rank": 122,
     "url": "https://github.com/googlemaps/platform-ai",
     "description": ""
   },
   {
-    "rank": 123,
     "url": "https://github.com/rbalch/docker-template",
     "description": "standard template to clone a new project"
   },
   {
-    "rank": 124,
     "url": "https://github.com/elasticdotventures/_b00t_",
     "description": "🤖 welcome session"
   }

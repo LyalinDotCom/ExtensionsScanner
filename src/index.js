@@ -6,6 +6,7 @@ const path = require('path');
 const { scanOrganizationRepos } = require('./scanners/organizationScanner');
 const { scanReposByTopic } = require('./scanners/topicScanner');
 const { scanSpecificRepos } = require('./scanners/repositoryScanner');
+const { scanReposByFile } = require('./scanners/fileSearchScanner');
 const { deduplicateRepos } = require('./utils/deduplicator');
 const { formatRepoData } = require('./utils/formatter');
 const { writeJSON } = require('./utils/fileWriter');
@@ -43,6 +44,14 @@ async function main() {
   if (config.repositories && config.repositories.length > 0) {
     const repos = await scanSpecificRepos(config.repositories);
     allRepoSets.push(repos);
+  }
+
+  // Scan by file searches
+  if (config.fileSearches && config.fileSearches.length > 0) {
+    for (const filename of config.fileSearches) {
+      const repos = await scanReposByFile(filename);
+      allRepoSets.push(repos);
+    }
   }
 
   // Deduplicate
