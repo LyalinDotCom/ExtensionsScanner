@@ -6,9 +6,14 @@ function formatRepoData(repos) {
   return sortedRepos.map((repo, index) => ({
     rank: index + 1,
     url: repo.html_url,
-    description: repo.description || '',
+    repoDescription: repo.description || '',
     stars: repo.stargazers_count,
-    lastUpdated: repo.updated_at
+    lastUpdated: repo.updated_at,
+    extensionName: repo.extensionMetadata?.extensionName || '',
+    extensionVersion: repo.extensionMetadata?.extensionVersion || '',
+    extensionDescription: repo.extensionMetadata?.extensionDescription || '',
+    hasMCP: repo.extensionMetadata?.hasMCP || 'No',
+    hasContext: repo.extensionMetadata?.hasContext || 'No'
   }));
 }
 

@@ -8,6 +8,7 @@ const { scanReposByTopic } = require('./scanners/topicScanner');
 const { scanSpecificRepos } = require('./scanners/repositoryScanner');
 const { scanReposByFile } = require('./scanners/fileSearchScanner');
 const { deduplicateRepos } = require('./utils/deduplicator');
+const { enrichReposWithMetadata } = require('./utils/extensionMetadata');
 const { formatRepoData } = require('./utils/formatter');
 const { writeJSON } = require('./utils/fileWriter');
 
@@ -58,8 +59,11 @@ async function main() {
   const allRepos = deduplicateRepos(allRepoSets);
   console.log(`\nTotal unique repos: ${allRepos.length}`);
 
+  // Enrich with extension metadata
+  const enrichedRepos = await enrichReposWithMetadata(allRepos);
+
   // Format and save
-  const formattedData = formatRepoData(allRepos);
+  const formattedData = formatRepoData(enrichedRepos);
   const outputFilename = config.output?.filename || 'repositories.json';
   await writeJSON(outputFilename, formattedData);
 
