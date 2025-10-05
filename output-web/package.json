@@ -1,0 +1,26 @@
+{
+  "name": "gemini-extensions-web",
+  "version": "1.0.0",
+  "description": "Web viewer for Gemini CLI Extensions",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run copy:data && vite",
+    "build": "npm run copy:data && vite build --outDir public && npm run copy:data:public",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "copy:data": "copyfiles -f ../output/gemini-extensions.json .",
+    "copy:data:public": "copyfiles -f ../output/gemini-extensions.json public"
+  },
+  "keywords": [
+    "gemini",
+    "extensions",
+    "viewer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "prettier": "^3.6.2",
+    "vite": "^7.1.9"
+  }
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini CLI Extensions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #30363d;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #8b949e;
+      font-size: 1.1rem;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: #161b22;
+      padding: 15px 25px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-top: 5px;
+    }
+
+    .search-bar {
+      margin-bottom: 30px;
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+      background: #0d1117;
+      padding: 10px 0;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 1rem;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #c9d1d9;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: #58a6ff;
+    }
+
+    .extensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .extension-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      transition: transform 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .extension-card:hover {
+      transform: translateY(-2px);
+      border-color: #58a6ff;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .rank {
+      background: #58a6ff;
+      color: #0d1117;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .extension-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #58a6ff;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+
+    .extension-version {
+      color: #8b949e;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #c9d1d9;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      min-height: 60px;
+    }
+
+    .repo-description {
+      color: #8b949e;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .badge-stars {
+      background: #f0883e;
+      color: #0d1117;
+    }
+
+    .badge-mcp {
+      background: #3fb950;
+      color: #0d1117;
+    }
+
+    .badge-context {
+      background: #a371f7;
+      color: #0d1117;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid #30363d;
+      font-size: 0.85rem;
+    }
+
+    .github-link {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .github-link:hover {
+      color: #79c0ff;
+      text-decoration: underline;
+    }
+
+    .last-updated {
+      color: #8b949e;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #8b949e;
+      font-size: 1.2rem;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .extensions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 Gemini CLI Extensions</h1>
+      <p class="subtitle">Discover and explore Gemini CLI extensions from the community</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" id="totalExtensions">-</div>
+          <div class="stat-label">Total Extensions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="mcpExtensions">-</div>
+          <div class="stat-label">With MCP</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="contextExtensions">-</div>
+          <div class="stat-label">With Context</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="🔍 Search extensions by name, description, or keywords..."
+        autocomplete="off"
+      >
+    </div>
+
+    <div id="extensionsContainer">
+      <div class="loading">Loading extensions...</div>
+    </div>
+  </div>
+
+  <script>
+    let allExtensions = [];
+
+    // Load and display extensions
+    async function loadExtensions() {
+      try {
+        const response = await fetch('./gemini-extensions.json');
+        allExtensions = await response.json();
+
+        updateStats();
+        renderExtensions(allExtensions);
+      } catch (error) {
+        document.getElementById('extensionsContainer').innerHTML =
+          '<div class="no-results">Error loading extensions. Make sure gemini-extensions.json exists.</div>';
+        console.error('Error loading extensions:', error);
+      }
+    }
+
+    // Update statistics
+    function updateStats() {
+      document.getElementById('totalExtensions').textContent = allExtensions.length;
+      document.getElementById('mcpExtensions').textContent =
+        allExtensions.filter(ext => ext.hasMCP === 'Yes').length;
+      document.getElementById('contextExtensions').textContent =
+        allExtensions.filter(ext => ext.hasContext === 'Yes').length;
+    }
+
+    // Render extensions to the page
+    function renderExtensions(extensions) {
+      const container = document.getElementById('extensionsContainer');
+
+      if (extensions.length === 0) {
+        container.innerHTML = '<div class="no-results">No extensions found matching your search.</div>';
+        return;
+      }
+
+      const html = `
+        <div class="extensions-grid">
+          ${extensions.map(ext => createExtensionCard(ext)).join('')}
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // Create individual extension card
+    function createExtensionCard(ext) {
+      const repoName = ext.url.split('/').slice(-2).join('/');
+      const lastUpdated = new Date(ext.lastUpdated).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+
+      const displayName = ext.extensionName || repoName;
+      const displayDescription = ext.extensionDescription || ext.repoDescription || 'No description available';
+
+      return `
+        <div class="extension-card" onclick="window.open('${ext.url}', '_blank')">
+          <div class="card-header">
+            <div class="rank">#${ext.rank}</div>
+          </div>
+
+          <div class="extension-name">${escapeHtml(displayName)}</div>
+          ${ext.extensionVersion ? `<div class="extension-version">v${escapeHtml(ext.extensionVersion)}</div>` : ''}
+
+          <div class="description">${escapeHtml(displayDescription)}</div>
+
+          ${ext.repoDescription && ext.extensionDescription ?
+            `<div class="repo-description">${escapeHtml(ext.repoDescription)}</div>` : ''}
+
+          <div class="badges">
+            <span class="badge badge-stars">⭐ ${ext.stars}</span>
+            ${ext.hasMCP === 'Yes' ? '<span class="badge badge-mcp">MCP Server</span>' : ''}
+            ${ext.hasContext === 'Yes' ? '<span class="badge badge-context">Context File</span>' : ''}
+          </div>
+
+          <div class="card-footer">
+            <a href="${ext.url}" class="github-link" onclick="event.stopPropagation()">
+              View on GitHub →
+            </a>
+            <span class="last-updated">Updated ${lastUpdated}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // Escape HTML to prevent XSS
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Search/filter functionality
+    function filterExtensions(searchTerm) {
+      const term = searchTerm.toLowerCase().trim();
+
+      if (!term) {
+        renderExtensions(allExtensions);
+        return;
+      }
+
+      const filtered = allExtensions.filter(ext => {
+        const searchableText = [
+          ext.extensionName,
+          ext.extensionDescription,
+          ext.repoDescription,
+          ext.url
+        ].join(' ').toLowerCase();
+
+        return searchableText.includes(term);
+      });
+
+      renderExtensions(filtered);
+    }
+
+    // Event listeners
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      filterExtensions(e.target.value);
+    });
+
+    // Initialize
+    loadExtensions();
+  </script>
+</body>
+</html>

@@ -9,6 +9,8 @@
   "scripts": {
     "start": "node src/index.js",
     "scan": "node src/index.js",
+    "web:dev": "cd output-web && npm run dev",
+    "web:build": "cd output-web && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["github", "scanner", "repository", "api"],
