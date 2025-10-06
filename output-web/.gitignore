@@ -70,9 +70,10 @@ node_modules/
 
 # Build output
 dist/
+public/
 
 # Vite
 .vite/
 
-# Don't ignore the public folder - it's needed for Firebase
-# But ignore specific build artifacts inside if needed
+# Data copied from parent during build
+gemini-extensions.json
