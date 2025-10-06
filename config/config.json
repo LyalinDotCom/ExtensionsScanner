@@ -1,11 +1,18 @@
 {
+  "_comments": {
+    "repositories": [
+      "automateyournetwork/GeminiCLI_Vision_Extension - Added 2025-10-05: Not appearing in GitHub code search results despite having gemini-extension.json file"
+    ]
+  },
   "organizations": [
     "gemini-cli-extensions"
   ],
   "topics": [
     "gemini-cli-extensions"
   ],
-  "repositories": [],
+  "repositories": [
+    "automateyournetwork/GeminiCLI_Vision_Extension"
+  ],
   "fileSearches": [
     "gemini-extension.json"
   ],

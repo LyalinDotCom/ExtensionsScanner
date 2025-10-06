@@ -10,14 +10,18 @@ function getTimestampedFilename(baseFilename) {
 
 async function writeJSON(filename, data) {
   const outputDir = path.join(__dirname, '../../output');
+  const historyDir = path.join(outputDir, 'history');
 
-  // Write timestamped version
+  // Ensure history directory exists
+  await fs.mkdir(historyDir, { recursive: true });
+
+  // Write timestamped version to history folder
   const timestampedFilename = getTimestampedFilename(filename);
-  const timestampedPath = path.join(outputDir, timestampedFilename);
+  const timestampedPath = path.join(historyDir, timestampedFilename);
   await fs.writeFile(timestampedPath, JSON.stringify(data, null, 2));
-  console.log(`✓ Written to ${timestampedFilename}`);
+  console.log(`✓ Written to history/${timestampedFilename}`);
 
-  // Write latest version (overwrites previous)
+  // Write latest version (overwrites previous) to output root
   const latestPath = path.join(outputDir, filename);
   await fs.writeFile(latestPath, JSON.stringify(data, null, 2));
   console.log(`✓ Updated ${filename}`);
