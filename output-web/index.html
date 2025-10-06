@@ -188,6 +188,68 @@
       color: #0d1117;
     }
 
+    .copy-button {
+      position: relative;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .copy-button:hover {
+      background: #30363d;
+      border-color: #58a6ff;
+      color: #58a6ff;
+    }
+
+    .copy-button:active {
+      transform: scale(0.95);
+    }
+
+    .copy-button.copied {
+      background: #238636;
+      border-color: #2ea043;
+      color: #ffffff;
+    }
+
+    .copy-icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2428;
+      color: #c9d1d9;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      margin-bottom: 5px;
+      transition: opacity 0.2s;
+      border: 1px solid #30363d;
+    }
+
+    .copy-button:hover .tooltip {
+      opacity: 1;
+    }
+
+    .copy-button.copied .tooltip {
+      opacity: 1;
+    }
+
     .card-footer {
       display: flex;
       justify-content: space-between;
@@ -195,6 +257,8 @@
       padding-top: 15px;
       border-top: 1px solid #30363d;
       font-size: 0.85rem;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .github-link {
@@ -354,6 +418,13 @@
           </div>
 
           <div class="card-footer">
+            <button class="copy-button" onclick="event.stopPropagation(); copyInstallCommand('${ext.url}', this)">
+              <svg class="copy-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+                <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+              </svg>
+              <span class="tooltip">Copy install command</span>
+            </button>
             <a href="${ext.url}" class="github-link" onclick="event.stopPropagation()">
               View on GitHub →
             </a>
@@ -368,6 +439,77 @@
       const div = document.createElement('div');
       div.textContent = text;
       return div.innerHTML;
+    }
+
+    // Copy install command to clipboard
+    async function copyInstallCommand(url, button) {
+      const command = `gemini extensions install ${url}`;
+
+      try {
+        // Modern clipboard API (preferred)
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(command);
+          showCopySuccess(button);
+        } else {
+          // Fallback for older browsers or restricted contexts
+          fallbackCopy(command, button);
+        }
+      } catch (err) {
+        // If modern API fails, try fallback
+        fallbackCopy(command, button);
+      }
+    }
+
+    // Fallback copy method using textarea
+    function fallbackCopy(text, button) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      textarea.style.top = '-9999px';
+      document.body.appendChild(textarea);
+
+      try {
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(button);
+        } else {
+          showCopyError(button);
+        }
+      } catch (err) {
+        showCopyError(button);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+
+    // Show success feedback
+    function showCopySuccess(button) {
+      const tooltip = button.querySelector('.tooltip');
+      const originalText = tooltip.textContent;
+
+      button.classList.add('copied');
+      tooltip.textContent = 'Copied!';
+
+      setTimeout(() => {
+        button.classList.remove('copied');
+        tooltip.textContent = originalText;
+      }, 2000);
+    }
+
+    // Show error feedback
+    function showCopyError(button) {
+      const tooltip = button.querySelector('.tooltip');
+      const originalText = tooltip.textContent;
+
+      tooltip.textContent = 'Failed to copy';
+
+      setTimeout(() => {
+        tooltip.textContent = originalText;
+      }, 2000);
     }
 
     // Search/filter functionality
