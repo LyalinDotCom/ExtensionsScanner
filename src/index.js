@@ -55,8 +55,9 @@ async function main() {
     }
   }
 
-  // Deduplicate
-  const allRepos = deduplicateRepos(allRepoSets);
+  // Deduplicate and filter excluded repos
+  const excludedRepos = config.excludedRepositories || [];
+  const allRepos = deduplicateRepos(allRepoSets, excludedRepos);
   console.log(`\nTotal unique repos: ${allRepos.length}`);
 
   // Enrich with extension metadata

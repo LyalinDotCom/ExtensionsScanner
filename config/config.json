@@ -16,6 +16,9 @@
   "fileSearches": [
     "gemini-extension.json"
   ],
+  "excludedRepositories": [
+    "https://github.com/google-gemini/gemini-cli"
+  ],
   "output": {
     "filename": "gemini-extensions.json"
   }
