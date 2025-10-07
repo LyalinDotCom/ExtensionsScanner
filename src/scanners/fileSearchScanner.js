@@ -9,7 +9,7 @@ async function scanReposByFile(filename) {
 
   while (hasMore && page <= 10) { // GitHub API max is 1000 results (10 pages)
     const data = await githubClient.get('GET /search/code', {
-      q: `filename:${filename}`,
+      q: `filename:${filename} path:/`,
       per_page: 100,
       page: page
     });
@@ -17,10 +17,13 @@ async function scanReposByFile(filename) {
     // Extract unique repositories from code search results
     // NOTE: Code search API returns incomplete repo data (no stars, no updated_at)
     // So we collect repo names and fetch full data later
+    // Only include files at root level (path equals filename exactly)
     for (const item of data.items) {
-      const repoKey = item.repository.full_name;
-      if (!repoMap.has(repoKey)) {
-        repoMap.set(repoKey, item.repository.full_name);
+      if (item.path === filename) {  // Verify it's at root level
+        const repoKey = item.repository.full_name;
+        if (!repoMap.has(repoKey)) {
+          repoMap.set(repoKey, item.repository.full_name);
+        }
       }
     }
 
