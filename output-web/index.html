@@ -346,7 +346,7 @@
     // Load and display extensions
     async function loadExtensions() {
       try {
-        const response = await fetch('./gemini-extensions.json');
+        const response = await fetch(`./gemini-extensions.json?t=${Date.now()}`);
         allExtensions = await response.json();
 
         updateStats();
